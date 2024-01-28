@@ -10,7 +10,7 @@ class Line extends StatefulWidget {
 class _LineState extends State<Line> {
   List<bool> _selections = [false, false, false, true];
   List<Color?> colors = [Colors.red,Colors.yellow[300],Colors.blue[800],Colors.green,Colors.purple,Colors.orange,Colors.purpleAccent,Colors.pink,Colors.grey,Colors.cyan,Colors.lightGreen];
-
+  List<String> colors_string = ['Red','Yellow','Blue','Green','Purple','Orange','Voilet','Pink','Grey','Aqua','Light Green'];
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -136,7 +136,7 @@ class _LineState extends State<Line> {
                                               fontWeight: FontWeight.bold),
                                         ),
                                         Text(
-                                          "Red Line",
+                                          "${colors_string[index]} Line",
                                           style: TextStyle(color: Colors.grey),
                                         ),
                                       ],
@@ -154,7 +154,7 @@ class _LineState extends State<Line> {
                                   child: Center(
                                       child: Text(
                                     'Normal Service',
-                                    style: TextStyle(color: Colors.grey,fontSize: 16.0),
+                                    style: TextStyle(color: Colors.grey,fontSize: 15.0),
                                   )),
                                 )
                               ],

@@ -438,7 +438,22 @@ class _HomeState extends State<Home> {
                           _selections[index] = !_selections[index];
                           if (index == 0 && _selections[index]) {
                             Navigator.pushNamed(context, '/home');
-                          } else if (index == 3 && _selections[index]) {
+                          } else if(index == 1 && _selections[index]) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text("Feature coming soon"),
+                              ),
+                            );
+                            _selections[index] = false;
+                          }
+                          else if(index == 3 && _selections[index]) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text("Feature coming soon"),
+                              ),
+                            );
+                          }
+                          else if (index == 3 && _selections[index]) {
                             Navigator.pushNamed(context, '/line');
                           }
                         });
